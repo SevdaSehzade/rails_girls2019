@@ -5,8 +5,16 @@ ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2', '>= 5.2.2.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3','~> 1.3.6'
+group :development do
+
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3','~> 1.3.6'
+end
+group :production do
+
+  # Use sqlite3 as the database for Active Record
+  gem 'pg'
+end
 
 gem 'carrierwave'
 # Use Puma as the app server
